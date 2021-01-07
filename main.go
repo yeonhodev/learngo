@@ -2,9 +2,10 @@ package main
 
 import "fmt"
 
+func multiply(a int, b int) int {
+	return a * b
+}
+
 func main() {
-	name := "nico"
-	// var name string = "nico" -> := 는 function 안에서만 타입을 추측해서 지정해 줌
-	name = "lynn"
-	fmt.Println(name)
+	fmt.Println(multiply(2, 2))
 }
