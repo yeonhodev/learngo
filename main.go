@@ -11,7 +11,7 @@ func canIDrink(age int) bool {
 	case 18:
 		return true
 	}
-	retur false
+	return false
 }
 
 func main() {
