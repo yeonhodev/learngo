@@ -6,6 +6,6 @@ import (
 
 func main() {
 	a := 2
-	b := 5
-	fmt.Println(&a, &b)
+	b := &a
+	fmt.Println(*b)
 }
