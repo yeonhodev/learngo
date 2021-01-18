@@ -1,8 +1,10 @@
 package main
 
+import "fmt"
+
 type person struct {
-	name string
-	age int
+	name    string
+	age     int
 	favFood []string
 }
 
