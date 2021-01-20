@@ -4,7 +4,8 @@ import "fmt"
 
 func main() {
 	a := 2
-	b := 5
+	// Save a's memory addres in b.
+	b := &a
 	// Put "&" in front of variables to see memory address.
-	fmt.Println(&a, &b)
+	fmt.Println(&a, b)
 }
