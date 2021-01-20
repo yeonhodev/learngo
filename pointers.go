@@ -3,9 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	a := 2
+	a := 3
 	// Save a's memory addres in b.
-	b := &a
 	// Put "&" in front of variables to see memory address.
-	fmt.Println(&a, b)
+	b := &a
+	// Put "*" in front of a variable to get a value of a memory address.
+	fmt.Println(b, *b)
 }
