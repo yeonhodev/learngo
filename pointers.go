@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+/*
+변수 앞에 '&'를 붙이면 해당 변수의 메모리 주소를 뜻한다.
+따라서 포인터형 변수에 대입할 수 있다.
+*는 포인터 변수를 역참조(dereference)해서 포인터형 변수에 값을 대입하거나, 가져올 수 있다.
+*/
+
 func main() {
 	a := 3
 	// assign memory address of a to b.
