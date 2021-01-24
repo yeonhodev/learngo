@@ -13,6 +13,10 @@ func 손가락봐라(str *string) {
 	*str = "별이다!"
 }
 
+func 발가락봐라(str string) {
+	str = "UFO다!"
+}
+
 func main() {
 	손가락 := "달이다!"
 	fmt.Println(손가락)
