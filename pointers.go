@@ -11,7 +11,7 @@ import "fmt"
 func main() {
 	이것은진리 := "달이다!"
 	var 손가락 *string = &이것은진리
-	fmt.Println(*손가락)
+	fmt.Println(*손가락, 손가락, &손가락)
 }
 
 /*
