@@ -9,8 +9,10 @@ import "fmt"
 // 매개변수(parameter), 전달인자(argument) = 호출할 때 함수 안에 넣어주는 숫자 5, 7
 
 func add(x, y int) (w1, w2 int) {
+	defer fmt.Println("나는 반환이 끝난 후 실행되요.")
 	w1 = x + y
 	w2 = x - y
+	fmt.Println("전 반환 작업 중입니다.")
 	return
 }
 
