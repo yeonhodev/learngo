@@ -8,8 +8,10 @@ import "fmt"
 // 매개변수형 = 데이터 타입
 // 매개변수(parameter), 전달인자(argument) = 호출할 때 함수 안에 넣어주는 숫자 5, 7
 
-func add(x, y int) (int, int) {
-	return x + y, x - y
+func add(x, y int) (w1, w2 int) {
+	w1 = x + y
+	w2 = x - y
+	return
 }
 
 func main() {
