@@ -8,8 +8,8 @@ Go 언어의 함수는 일련의 코드를 실행해 주는 함수의 역할 뿐
 */
 
 func main() {
-	hamsu := func(x int) {
-		fmt.Println(x)
-	}
-	hamsu(7)
+	hamsu := func(x int) int {
+		return x * -1
+	}(7)
+	fmt.Println(hamsu)
 }
