@@ -2,15 +2,13 @@ package main
 
 import "fmt"
 
-func test(x, y int) (z1, z2 int) {
-	defer fmt.Println("hello")
-	z1 = x + y
-	z2 = x - y
-	fmt.Println("before return")
-	return
+func test2(myFunc func(int) int) {
+	fmt.Println(myFunc(7))
 }
 
 func main() {
-	ans1, ans2 := test(6, 7)
-	fmt.Println(ans1, ans2)
+	test := func(x int) int {
+		return x * -1
+	}
+	test2(test)
 }
