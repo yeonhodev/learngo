@@ -2,14 +2,10 @@ package main
 
 import "fmt"
 
-func returnFunc(x string) func() {
-	return func() {
-		fmt.Println(x)
-	}
-}
-
 func main() {
-	returnFunc("hello")()
-	x := returnFunc("goodbye")
-	x()
+	var name string
+	name = "Tim"
+	name = "Bill"
+
+	fmt.Println("Hello World!")
 }
