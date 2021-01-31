@@ -3,9 +3,6 @@ package main
 import "fmt"
 
 func main() {
-	var name string
-	name = "Tim"
-	name = "Bill"
-
-	fmt.Println("Hello World!")
+	number := 2000.98
+	fmt.Printf("%T", number)
 }
