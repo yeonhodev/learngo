@@ -3,6 +3,6 @@ package main
 import "fmt"
 
 func main() {
-	number := 2000.98
-	fmt.Printf("%T", number)
+	//var number float64 = 2000.98
+	fmt.Printf("Hello %T %v", 10, 10)
 }
