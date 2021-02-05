@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	var num1 float32 = 9
-	var num2 float32 = 4
-	answer := num1 / num2
-	fmt.Printf("%g", answer)
+	x := 5
+	//y := 6
+	val := x < 5
+	fmt.Printf("%t", val)
 }
