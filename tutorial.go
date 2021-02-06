@@ -7,12 +7,12 @@ import (
 func main() {
 	ans := 10
 
-	switch ans {
-	case 1:
-		fmt.Println("1. one")
-	case 2:
-		fmt.Println("two")
+	switch {
+	case ans > 0:
+		fmt.Println("greater than 0")
+	case ans < 0:
+		fmt.Println("less than 0")
 	default:
-		fmt.Println("not a case")
+		fmt.Println("zero")
 	}
 }
