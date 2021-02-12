@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	var a []int = []int{5, 6, 7, 8, 9}
-	fmt.Println(cap(a))
-	fmt.Println(cap(a[:3]))
-	a = append(a, 10)
-	fmt.Println(a)
+	var a []int = []int{1, 3, 4, 56, 7, 12, 4, 6}
 
-	b := make([]int, 5)
-	fmt.Println(b)
-	fmt.Printf("%T", b)
+	for i := 0; i < len(a); i++ {
+		fmt.Println(a[i])
+	}
+
+	for i, element := range a {
+		fmt.Printf("%d: %d\n", i, element)
+	}
 }
