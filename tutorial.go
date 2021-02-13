@@ -3,13 +3,22 @@ package main
 import "fmt"
 
 func main() {
-	var a []int = []int{1, 3, 4, 56, 7, 12, 4, 6}
-
-	for i := 0; i < len(a); i++ {
-		fmt.Println(a[i])
+	// mp := make(map[string]int)
+	var mp map[string]int = map[string]int{
+		"apple":  5,
+		"pear":   6,
+		"orange": 9,
 	}
 
-	for i, element := range a {
-		fmt.Printf("%d: %d\n", i, element)
-	}
+	fmt.Println(len(mp))
+
+	// Check if a value exists in a map
+	val, ok := mp["apple"]
+	fmt.Println(val, ok)
+
+	fmt.Println(mp["apple"])
+	mp["apple"] = 900
+	mp["tim"] = 10
+	delete(mp, "pear")
+	fmt.Println(mp)
 }
