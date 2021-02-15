@@ -2,23 +2,15 @@ package main
 
 import "fmt"
 
+func add(x, y int) (z1, z2 int) {
+	defer fmt.Println("hello")
+	z1 = x + y
+	z2 = x - y
+	fmt.Println("before return")
+	return
+}
+
 func main() {
-	// mp := make(map[string]int)
-	var mp map[string]int = map[string]int{
-		"apple":  5,
-		"pear":   6,
-		"orange": 9,
-	}
-
-	fmt.Println(len(mp))
-
-	// Check if a value exists in a map
-	val, ok := mp["apple"]
-	fmt.Println(val, ok)
-
-	fmt.Println(mp["apple"])
-	mp["apple"] = 900
-	mp["tim"] = 10
-	delete(mp, "pear")
-	fmt.Println(mp)
+	ans1, ans2 := add(5, 7)
+	fmt.Println(ans1, ans2)
 }
