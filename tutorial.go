@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+func changeFirst(slice []int) {
+	slice[0] = 1000
+}
+
 //mutable data type
 func main() {
 	var x []int = []int{3, 4, 5}
@@ -18,4 +22,7 @@ func main() {
 	d := c
 	d[0] = 100
 	fmt.Println(c, d)
+
+	changeFirst(x)
+	fmt.Println(x)
 }
