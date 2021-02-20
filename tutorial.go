@@ -7,8 +7,13 @@ type Point struct {
 	y int32
 }
 
+func changeX(pt *Point) {
+	pt.x = 100
+}
+
 func main() {
-	var p1 Point = Point{1, 2}
-	//var p2 Point = Point{-5, 7}
-	fmt.Println(p1.x)
+	p1 := &Point{y: 3}
+	fmt.Println(p1)
+	changeX(p1)
+	fmt.Println(p1)
 }
