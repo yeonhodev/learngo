@@ -2,17 +2,17 @@ package main
 
 import "fmt"
 
-type Point struct {
-	x int32
-	y int32
+type Student struct {
+	name   string
+	grades []int
+	age    int
 }
 
-type Circle struct {
-	radius float64
-	center *Point
+func (s Student) getAge() int {
+	return s.age
 }
 
 func main() {
-	c1 := Circle{4.56, &Point{4, 5}}
-	fmt.Println(c1.center, c1.center.x)
+	s1 := Student{"Tim", []int{70, 90, 80, 85}, 19}
+	fmt.Println(s1.getAge())
 }
