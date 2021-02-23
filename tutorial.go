@@ -1,40 +1,37 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
-type Student struct {
-	name   string
-	grades []int
-	age    int
+type shape interface {
+	area() float64
 }
 
-/*func (s *Student) setAge(age int) {
-	s.age = age
-}*/
-
-func (s *Student) getAverageGrade() float32 {
-	sum := 0
-	for _, v := range s.grades {
-		sum += v
-	}
-	return float32(sum) / float32(len(s.grades))
+type circle struct {
+	radius float64
 }
 
-func (s *Student) getMaxGrade() int {
-	curMax := 0
+type rect struct {
+	width  float64
+	height float64
+}
 
-	for _, v := range s.grades {
-		if curMax < v {
-			curMax = v
-		}
-	}
-	return curMax
+func (r rect) area() float64 {
+	return r.width * r.height
+}
+
+func (c circle) area() float64 {
+	return math.Pi * c.radius * c.radius
 }
 
 func main() {
-	s1 := Student{"Tim", []int{70, 90, 80, 85}, 19}
-	s2 := Student{"Jeo", []int{70, 90, 80, 85, 90, 95}, 21}
-	max := s1.getMaxGrade()
-	max2 := s2.getMaxGrade()
-	fmt.Println(max, max2)
+	c1 := circle{4.5}
+	r1 := rect{5, 7}
+	shapes := []shape{c1, r1}
+
+	for _, shape := range shapes {
+		fmt.Println(shape.area())
+	}
 }
